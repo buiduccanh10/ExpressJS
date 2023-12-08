@@ -1,0 +1,21 @@
+<h1>Category page</h1>
+<h2>Category list</h2>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Function</th>
+  </tr>
+  {{#each category_list}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{description}}</td>
+      <td>
+        <a href="/category/edit/{{_id}}">Edit</a>
+        <a href="/category/delete/{{_id}}">Delete</a>
+      </td>
+    </tr>
+  {{/each}}
+
+</table>

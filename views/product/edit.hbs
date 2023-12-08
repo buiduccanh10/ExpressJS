@@ -1,0 +1,38 @@
+<form action="" method="post">
+  <input
+    type="text"
+    name="name"
+    id=""
+    required
+    placeholder="Name product"
+    value="{{product.name}}"
+  />
+  <br />
+  <input
+    type="number"
+    name="price"
+    id=""
+    required
+    placeholder="Price"
+    value="{{product.price}}"
+  />
+  <br />
+  <input
+    type="text"
+    name="image"
+    id=""
+    required
+    placeholder="Image"
+    value="{{product.image}}"
+  />
+  <br />
+  Category:
+  <select name="category" id="">
+    <option selected="selected" value="{{product.category._id}}">{{product.category.name}}</option>
+    {{#each category_list}}
+      <option value="{{_id}}"> {{name}}</option>
+    {{/each}}
+  </select>
+  <br />
+  <input type="submit" value="Update" />
+</form>

@@ -1,0 +1,16 @@
+<form action="" method="post">
+  <input type="text" name="name" id="" required placeholder="Name product" />
+  <br />
+  <input type="number" name="price" id="" required placeholder="Price" />
+  <br />
+  <input type="text" name="image" id="" required placeholder="Image" />
+  <br />
+  Category:
+  <select name="category" id="">
+    {{#each category_list}}
+      <option value="{{_id}}"> {{name}}</option>
+    {{/each}}
+  </select>
+  <br>
+  <input type="submit" value="Add">
+</form>
